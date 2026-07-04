@@ -3,7 +3,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: "https://mamun-traffic.github.io",
-  base: "/",   // IMPORTANT for USER pages (your case)
+
+  // IMPORTANT: for GitHub Pages user site
+  base: "/",
+
   vite: {
     plugins: [tailwindcss()],
   },
