@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "G M AL MAMUN | AI & Intelligent Transportation Researcher",
+	description = "Personal website of G M AL MAMUN. Research in Autonomous Vehicle Safety, Autonomous Driving Behavior, Artificial Intelligence in Transportation, Intelligent Transportation Systems, Cooperative Perception, and Connected & Automated Vehicles."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta name="description" content={description} />
+
+	<meta name="author" content="G M AL MAMUN" />
+
+	<title>{title}</title>
+
+	<link rel="icon" href="/favicon.ico" />
+
+</head>
+
+<body class="bg-white text-slate-800">
+
+  <Navbar />
+
+ <main class="pt-20">
+  <slot />
+</main>
+
+<Footer />
+
+</body>
+
+</html>
